@@ -133,7 +133,8 @@ const Context = props => {
 			lastUpdate: lastUpdate, 
 			printMode: printMode, 
 			enterPrintMode: enterPrintMode, 
-			exitPrintMode: exitPrintMode
+			exitPrintMode: exitPrintMode, 
+			isAdmin: isAdmin
 		}}>
 		
 		{ isLoading && <Loading /> }

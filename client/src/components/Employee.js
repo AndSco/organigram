@@ -29,10 +29,15 @@ const Employee = props => {
 			<div className={`employee ${staffMember.team.split(" ")[0].toUpperCase()}`}>
 				<div className="left-side-card">
 					<div className="profile-pic" style={{backgroundImage: `url(${staffMember.imageUrl})`}} ></div>
-					<div className="edit-delete">
-						<FontAwesomeIcon icon="edit" onClick={openEditForm} />
-						<FontAwesomeIcon icon="trash-alt" onClick={() => setIsDeleting(true)} />
-					</div>	
+					{ context.isAdmin && 
+						(
+							<div className="edit-delete">
+								<FontAwesomeIcon icon="edit" onClick={openEditForm} />
+								<FontAwesomeIcon icon="trash-alt" onClick={() => setIsDeleting(true)} />
+							</div>	
+						)
+					}
+					
 				</div>	
 				{isDeleting && <DeleteConfirmation delete={context.removeStaffMember} staffMember={staffMember} removeModal={removeModal} />}
 				{isEditing && <AddForm action="edit" closeForm={closeEditForm} staffMember={staffMember} />}
