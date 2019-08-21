@@ -386,7 +386,7 @@ header {
 	align-items: center;
 }
 
-.delete-box, .error-box {
+.delete-box, .error-box, .login-box {
   	background-color: #17202A;
   	width: 30%;
   	height: 25%;
@@ -413,6 +413,37 @@ header {
 
 .delete-box button:nth-child(2) {
 	background-color: #64C964;
+}
+
+.login-box {
+	width: 50%;
+	height: 35%;
+	align-items: center;
+	color: white;
+}
+
+.login-box h3 {
+	margin-top: 0;
+}
+
+.login-box form {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+}
+
+.login-box form input {
+	font-size: 1em;
+	margin-bottom: .4em;
+	padding: .4em;
+}
+
+.login-box form button {
+	background-color: #64C964;
+	color: white;
+	font-size: 1em;
+	padding: .4em;
+	font-weight: bold;
 }
 
 /* EDIT FORM */

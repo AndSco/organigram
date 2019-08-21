@@ -30,8 +30,8 @@ function App() {
 		return (
 			<Context>
 			    <div className="App">
-				      <Header addStaffMember={addStaffMember} />
-				      { isAdding && <AddForm closeForm={closeForm} /> }
+				    <Header addStaffMember={addStaffMember} />
+				    { isAdding && <AddForm closeForm={closeForm} /> }
 			      <Grid />
 			    </div>
 			</Context> 

@@ -3,6 +3,7 @@ import StaffContext from "./StaffContext";
 import axios from "axios";
 import Loading from "../components/Loading";
 import ErrorBox from "../components/Error";
+import Login from "../components/Login";
 
 
 const Context = props => {
@@ -16,6 +17,8 @@ const Context = props => {
 	const [error, setError] = useState(false);
 	const [lastUpdate, setLastUpdate] = useState(null);
 	const [printMode, setPrintMode] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [isAdmin, setIsAdmin] = useState(false);
 	
 
 	const manageNewInput = () => {
@@ -60,6 +63,15 @@ const Context = props => {
 
 	const exitPrintMode = () => {
 		setPrintMode(false);
+	}
+
+
+	const handleLogin = () => {
+		setIsLoggedIn(true);
+	}
+
+	const authoriseAdmin = () => {
+		setIsAdmin(true);
 	}
 
 	// EFFECTS
@@ -128,7 +140,12 @@ const Context = props => {
 		
 		{ error && <ErrorBox message={error} removeError={removeError} /> }
 			
-			{props.children}
+			{ isLoggedIn 
+				? 
+				props.children
+				:
+				<Login handleLogin={handleLogin} authoriseAdmin={authoriseAdmin} />
+			}
 		
 		</StaffContext.Provider>
 	)

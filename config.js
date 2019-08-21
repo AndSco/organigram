@@ -5,5 +5,7 @@ module.exports = {
   mlabPword: process.env.MLAB_PWORD, 
   cloudName: process.env.CLOUD_NAME,
   cloudinaryKey: process.env.CLOUDINARY_KEY, 
-  cloudinarySecret: process.env.CLOUDINARY_SECRET
+  cloudinarySecret: process.env.CLOUDINARY_SECRET,
+  adminLogin: process.env.ADMIN_LOGIN, 
+  readerLogin: process.env.READER_LOGIN
 };

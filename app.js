@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const Employee = require("./models/employee");
 const Image = require("./models/image");
 const path = require("path"); // To serve both frontend and backend
+const config = require("./config"); // Import process.env keys
 
 // BODY PARSER
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,6 +35,26 @@ const parser = multer({ storage: storage });
 
 
 // ROUTES
+
+// Login
+app.post("/api/login", (req, res) => {
+	try {
+		if (req.body.password === config.adminLogin) {
+			res.status(200).json("isAdmin");
+		} 
+		else if (req.body.password === config.readerLogin) { 
+			res.status(200).json("isReader");
+		}
+		else {
+			res.status(200).json("unauthorised");
+		}
+	}
+	catch(err) { 
+		console.log(err);
+	}
+})
+
+
 
 // images
 app.post('/api/images', parser.single("image"), (req, res) => {
