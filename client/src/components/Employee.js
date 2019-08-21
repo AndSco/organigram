@@ -66,7 +66,7 @@ const Employee = props => {
 						</div>	
 						<div className="email">
 							<FontAwesomeIcon icon="envelope" />	
-							<a href={`mailto:${staffMember.email}`}>{staffMember.email}</a>
+							<a href={`mailto:${staffMember.email}`} target="_blank">{staffMember.email}</a>
 						</div>	
 					</div>
 				</div>
