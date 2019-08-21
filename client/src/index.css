@@ -716,18 +716,12 @@ header {
 		width: 60px;
 	}
 
+	.login-box {
+		width: 100vw;
+		height: 100vh;
+		font-size: 20px;
+	}
+
 }
-
-
-/* For A2 PDF */
-/*@media all and (min-width: 1190px) {
-	.employee {
-		width: 350px;
-	}
-
-	.grid {
-		width: 100%;
-	}
-}*/	
 
 
