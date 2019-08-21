@@ -183,6 +183,11 @@ header {
 	padding: 0 3px 0 15px;
 }
 
+
+#mail-link {
+	cursor: pointer;
+}
+
 .email svg {
 	padding-left: 0;
 	padding-right: 8px;

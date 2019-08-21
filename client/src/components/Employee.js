@@ -66,7 +66,10 @@ const Employee = props => {
 						</div>	
 						<div className="email">
 							<FontAwesomeIcon icon="envelope" />	
-							<a href={`mailto:${staffMember.email}`} target="_blank">{staffMember.email}</a>
+							<a id="mail-link" onClick={() => {
+								window.location.href = `mailto:${staffMember.email}`;
+								return;
+							}}>{staffMember.email}</a>
 						</div>	
 					</div>
 				</div>
@@ -76,4 +79,6 @@ const Employee = props => {
 	
 }
 
+
+// href={`mailto:${staffMember.email}`}
 export default Employee;
