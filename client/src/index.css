@@ -619,10 +619,18 @@ header {
 		padding-left: 1em;
 	}
 
+	#icons-menu {
+		justify-content: flex-end;
+	}
+
 	#icons-menu svg {
-		width: 25px;
+		/*width: 25px;*/
 		top: 1%;
 	}	
+
+	.fa-download {
+		display: none;
+	}
 
 	.form {
 		width: 100%;
