@@ -607,14 +607,19 @@ header {
 	}
 
 	.title h2 {
-		width: 75%;
-		font-size: 1.8em;
+		width: 62%;
+		font-size: 23px;
 	}
 
 	.title h1 {
-		width: 90%;
-		font-size: 2em;
+		width: 75%;
+		font-size: 28px;
 	}
+
+	#icons-menu svg {
+		width: 25px;
+		top: 1%;
+	}	
 
 	.form {
 		width: 100%;
@@ -658,6 +663,11 @@ header {
 		font-size: 1.7em;
 		width: 90%;
 	}
+
+	#icons-menu {
+		width: 60px;
+	}
+
 }
 
 
