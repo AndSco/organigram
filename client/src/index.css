@@ -586,6 +586,7 @@ header {
 	.employee {
 		width: 90%;
 		height: 200px;
+		box-shadow: none;
 	}
 
 	.details {
@@ -607,13 +608,15 @@ header {
 	}
 
 	.title h2 {
-		width: 62%;
-		font-size: 23px;
+		width: 72%;
+		font-size: 24px;
+		padding-left: 1em;
 	}
 
 	.title h1 {
 		width: 80%;
-		font-size: 24px;
+		font-size: 28px;
+		padding-left: 1em;
 	}
 
 	#icons-menu svg {
