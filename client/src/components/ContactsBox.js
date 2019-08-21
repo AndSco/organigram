@@ -26,7 +26,7 @@ const ContactsBox = props => {
 						:
 						<FontAwesomeIcon icon="phone-square-alt"/>
 					}
-					+356 2342 5100
+					<a href="tel:+35623425100">+356 2342 5100</a>
 				</li>
 
 				<li>{context.printMode 
@@ -35,7 +35,10 @@ const ContactsBox = props => {
 						:
 						<FontAwesomeIcon icon="envelope"/>
 					}
-					<a href={`mailto:${"comm-rep-mt@ec.europa.eu"}`}>comm-rep-mt@ec.europa.eu</a>
+					<span onClick={() => {
+						window.location.href = "mailto:comm-rep-mt@ec.europa.eu";
+						return;
+					}} className="mail-link">comm-rep-mt@ec.europa.eu</span>
 				</li>
 
 				<li>{context.printMode 

@@ -184,8 +184,9 @@ header {
 }
 
 
-#mail-link {
+.mail-link {
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 .email svg {

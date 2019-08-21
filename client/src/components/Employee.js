@@ -48,7 +48,7 @@ const Employee = props => {
 									:
 									<FontAwesomeIcon icon="phone-square-alt" />
 								} 
-								{staffMember.officePhone}
+								<a href={`tel:+35623425${staffMember.officePhone}`}>{staffMember.officePhone}</a>
 							</span>	
 							{ staffMember.mobile && 
 								<span className="mobile">
@@ -58,7 +58,7 @@ const Employee = props => {
 										:
 										<FontAwesomeIcon icon="mobile-alt" />
 									}
-									{staffMember.mobile} 
+									<a href={`tel:+356${staffMember.mobile}`}>{staffMember.mobile}</a> 
 									
 									
 								</span>	
@@ -66,10 +66,10 @@ const Employee = props => {
 						</div>	
 						<div className="email">
 							<FontAwesomeIcon icon="envelope" />	
-							<a id="mail-link" onClick={() => {
+							<span className="mail-link" onClick={() => {
 								window.location.href = `mailto:${staffMember.email}`;
 								return;
-							}}>{staffMember.email}</a>
+							}}>{staffMember.email}</span>
 						</div>	
 					</div>
 				</div>
