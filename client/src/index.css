@@ -56,7 +56,6 @@ header {
 }
 
 #icons-menu {
-	width: 86px;
 	display: flex;
 	justify-content: space-between;
 	position: absolute;
@@ -66,6 +65,11 @@ header {
 	cursor: pointer;
 	padding: .5em;
 }
+
+#icons-menu svg {
+	margin-left: .5em;	
+}
+
 
 .title {
 	/*padding-left: 2.5em;*/
@@ -658,7 +662,11 @@ header {
 	}
 
 	header {
-		height: 180px;
+		height: 220px;
+	}
+
+	.title {
+		padding-top: 3.6em;
 	}
 
 	.title h2 {
@@ -678,7 +686,6 @@ header {
 	}
 
 	#icons-menu svg {
-		/*width: 25px;*/
 		top: 1%;
 	}	
 
@@ -729,10 +736,6 @@ header {
 		width: 90%;
 	}
 
-	#icons-menu {
-		width: 60px;
-	}
-
 	.login-box {
 		width: 100vw;
 		height: 100vh;
@@ -744,5 +747,7 @@ header {
 	}
 
 }
+
+
 
 

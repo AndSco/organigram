@@ -33,6 +33,7 @@ const Header = props => {
 			<div id="icons-menu">
 				<FontAwesomeIcon icon="download" size="2x" onClick={savePdf} />
 				{ context.isAdmin && <FontAwesomeIcon icon="user-plus" size="2x" onClick={props.addStaffMember} />}
+				<FontAwesomeIcon icon="sign-out-alt" size="2x" onClick={context.logOut} />
 			</div>	
 			<div className="title">
 				<h2>European Commission</h2>

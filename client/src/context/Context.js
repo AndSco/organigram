@@ -70,6 +70,11 @@ const Context = props => {
 		setIsLoggedIn(true);
 	}
 
+	const logOut = () => {
+		setIsAdmin(false);
+		setIsLoggedIn(false);
+	}
+
 	const authoriseAdmin = () => {
 		setIsAdmin(true);
 	}
@@ -134,7 +139,8 @@ const Context = props => {
 			printMode: printMode, 
 			enterPrintMode: enterPrintMode, 
 			exitPrintMode: exitPrintMode, 
-			isAdmin: isAdmin
+			isAdmin: isAdmin, 
+			logOut: logOut
 		}}>
 		
 		{ isLoading && <Loading /> }
