@@ -40,7 +40,7 @@ const Employee = props => {
 					
 				</div>	
 				{isDeleting && <DeleteConfirmation delete={context.removeStaffMember} staffMember={staffMember} removeModal={removeModal} />}
-				{isEditing && <AddForm action="edit" closeForm={closeEditForm} staffMember={staffMember} />}
+				<AddForm action="edit" status={ isEditing ? "form-showing" : "form-hidden" } closeForm={closeEditForm} staffMember={staffMember} />
 				<div className="details">
 					<h4>{ staffMember.designation }</h4>
 					<p className="name"><em>{ capitalizeSurname(staffMember.name) }</em></p>

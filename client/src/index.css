@@ -254,15 +254,25 @@ header {
 
 /* FORM */
 .form {
+	position: fixed;
+	z-index: 5;
 	width: 40%;
 	margin: 0 auto;
-	position: fixed;
-	top: 0;
-	right: 0;
 	background-color: #2E1F27;
 	padding: 1em 0 0 0;
 	color: white;
-	z-index: 5;
+}
+
+.form-showing {
+	top: 0;
+	right: 0;
+	transition: right .4s ease;
+}
+
+.form-hidden {
+	top: 0;
+	right: -100%;
+	transition: right .4s ease;
 }
 
 .form form {
@@ -559,7 +569,7 @@ header {
 }
 
 
-@media all and (max-width:1000px) {
+@media all and (max-width:1040px) {
 	.top-container, .team-container {
 		flex-direction: column;
 		align-items: center;
@@ -646,13 +656,13 @@ header {
 
 	.title h2 {
 		width: 72%;
-		font-size: 24px;
+		font-size: 20px;
 		padding-left: 1em;
 	}
 
 	.title h1 {
-		width: 80%;
-		font-size: 28px;
+		width: 90%;
+		font-size: 24px;
 		padding-left: 1em;
 	}
 

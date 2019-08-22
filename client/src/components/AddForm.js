@@ -129,8 +129,8 @@ const AddForm = props => {
 
 
 	return (
-		<div className="form">
-			<FontAwesomeIcon icon="window-close" onClick={ props.closeForm} size="lg" />
+		<div className={`form ${props.status}`}>
+			<FontAwesomeIcon icon="chevron-circle-right" onClick={ props.closeForm} size="lg" />
 			<h2>{props.action === "edit" ? `EDIT ${props.staffMember.name.toUpperCase()}` : "ADD A STAFF MEMBER"}</h2>
 			<form onSubmit={props.action === "edit" ? (e) => handleUpdate(e, props.staffMember._id) : (e) => handleSubmit(e)}>
 				<input type="text" name="designation" placeholder="designation" value={designation} onChange={(e) => handleChange(e, "designation")}  />
