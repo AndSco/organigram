@@ -735,6 +735,10 @@ header {
 		font-size: 20px;
 	}
 
+	.error-box {
+		width : 80%;
+	}
+
 }
 
 

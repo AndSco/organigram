@@ -123,7 +123,7 @@ const AddForm = props => {
 	}
 
 
-	useEffect(() => console.log(needNewPicture), [needNewPicture])
+	// useEffect(() => console.log(needNewPicture), [needNewPicture])
 
 	// useEffect(() => console.log(designation, name, officePhone, mobile, email, team, imageFile), [designation, name, officePhone, mobile, email, team, imageFile]);
 
