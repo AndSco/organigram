@@ -653,7 +653,7 @@ header {
 		padding-top: .5em;
 	}
 
-	.fa-envelope {
+	.email .fa-envelope {
 		display: none;
 	}
 
