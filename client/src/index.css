@@ -145,6 +145,7 @@ header {
 	height: 85px;
 	background-size: cover;
 	background-position: center;
+	border: 2px solid white;
 }
 
 .left-side-card {
