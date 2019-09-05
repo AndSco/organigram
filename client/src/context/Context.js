@@ -17,8 +17,12 @@ const Context = props => {
 	const [error, setError] = useState(false);
 	const [lastUpdate, setLastUpdate] = useState(null);
 	const [printMode, setPrintMode] = useState(false);
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
-	const [isAdmin, setIsAdmin] = useState(false);
+
+	// check first if credentials are in local storage
+	const credentialsInStorage = localStorage["isAdmin"] || localStorage["isReader"];
+	const [isLoggedIn, setIsLoggedIn] = useState(credentialsInStorage);
+	const isAdminInStorage = localStorage["isAdmin"];
+	const [isAdmin, setIsAdmin] = useState(isAdminInStorage);
 	
 
 	const manageNewInput = () => {
@@ -73,6 +77,9 @@ const Context = props => {
 	const logOut = () => {
 		setIsAdmin(false);
 		setIsLoggedIn(false);
+		// REMOVE CREDENTIALS FROM LOCAL STORAGE WHEN LOGGING OUT
+		localStorage.removeItem("isAdmin");
+		localStorage.removeItem("isReader");
 	}
 
 	const authoriseAdmin = () => {

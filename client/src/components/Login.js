@@ -18,9 +18,11 @@ const Login = props => {
 				if (res.data === "isAdmin") {
 					props.handleLogin();
 					props.authoriseAdmin();
+					localStorage.setItem("isAdmin", "true");
 				}
 				else if (res.data === "isReader") {
 					props.handleLogin();
+					localStorage.setItem("isReader", "true");
 				}
 				else { 
 					setError(true);
