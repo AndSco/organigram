@@ -8,6 +8,9 @@ import moment from "moment";
 const Grid = props => {
 
 	const context = useContext(StaffContext);
+
+	// Authomatically logs out after 29 mins to avoid Heroku server going to sleep
+	setTimeout(context.logOut, 1740000);
 	
 	return(
 		<div className="grid">

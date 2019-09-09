@@ -496,10 +496,12 @@ header {
 
 /* ERROR BOX */
 .error-box {
-	color: white;
+	/*color: white;*/
 	text-align: center;
 	padding: 1em;
 	z-index: 20;
+	background: white;
+    color: black;
 }
 
 .error-box svg {

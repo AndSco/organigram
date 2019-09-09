@@ -9,13 +9,13 @@ import AddForm from "./components/AddForm";
 import Context from "./context/Context";
 
 
+
 library.add(fab, faChevronCircleRight, faSignOutAlt, faDownload, faHome, faDesktop, faTrashAlt, faEdit, faMobileAlt, faPhoneSquareAlt, faEnvelope, faUserPlus, faWindowClose);
 
 
 function App() {
 	// const [staffMembers, setStaffMembers] = useState(null); NOW MANAGED BY CONTEXT
 	const [isAdding, setIsAdding] = useState(false);
-
 
 	const addStaffMember = () => {
 		setIsAdding(true);

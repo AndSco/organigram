@@ -75,6 +75,7 @@ const Context = props => {
 	}
 
 	const logOut = () => {
+		console.log("LOGGING OUT");
 		setIsAdmin(false);
 		setIsLoggedIn(false);
 		// REMOVE CREDENTIALS FROM LOCAL STORAGE WHEN LOGGING OUT
