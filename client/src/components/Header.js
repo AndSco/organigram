@@ -13,7 +13,9 @@ const Header = props => {
 		context.startLoading();
 		await context.enterPrintMode();
 		const toPrint = document.querySelector(".App");
+		// const employees = document.querySelectorAll(".employee");
 		toPrint.className += " to-print";
+		// employees.className += "employees-to-print";
 		html2canvas(toPrint, {useCORS: true}) // to allow saving external images!
 	      .then(canvas => {
 	        const imgData = canvas.toDataURL("image/png");

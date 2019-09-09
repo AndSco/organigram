@@ -129,6 +129,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	width: 300px;
+	width: 25vw;
 	height: 120px;
 	padding: 1em 1em 1.5em 1em;
 	-webkit-box-shadow: 4px 2px 5px 0px rgba(0,0,0,0.75);
@@ -575,6 +576,9 @@ header {
 	height: 100%;
 }
 
+.employees-to-print {
+	width: 400px;
+}
 
 @media all and (max-width:1040px) {
 	.top-container, .team-container {
@@ -753,7 +757,7 @@ header {
 
 
 /* make employees bigger in bigger screens */
-@media all and (min-width: 1500px) {
+/*@media all and (min-width: 1500px) {
 	.employee {
 		width: 400px;
 	}
@@ -764,6 +768,6 @@ header {
 		width: 420px;
 	}
 }
-
+*/
 
 
