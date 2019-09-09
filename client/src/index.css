@@ -752,5 +752,18 @@ header {
 }
 
 
+/* make employees bigger in bigger screens */
+@media all and (min-width: 1500px) {
+	.employee {
+		width: 400px;
+	}
+}
+
+@media all and (min-width: 1640px) {
+	.employee {
+		width: 420px;
+	}
+}
+
 
 
