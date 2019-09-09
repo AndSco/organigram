@@ -576,9 +576,7 @@ header {
 	height: 100%;
 }
 
-.employees-to-print {
-	width: 400px;
-}
+
 
 @media all and (max-width:1040px) {
 	.top-container, .team-container {

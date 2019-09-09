@@ -13,14 +13,15 @@ const Header = props => {
 		context.startLoading();
 		await context.enterPrintMode();
 		const toPrint = document.querySelector(".App");
-		// const employees = document.querySelectorAll(".employee");
 		toPrint.className += " to-print";
-		// employees.className += "employees-to-print";
+		// Remove box shadow to all employees!
+		const employees = document.querySelectorAll(".employee");
+		await employees.forEach(div => div.style.boxShadow = "none");
 		html2canvas(toPrint, {useCORS: true}) // to allow saving external images!
 	      .then(canvas => {
 	        const imgData = canvas.toDataURL("image/png");
-	        const pdf = new jsPdf("p", "mm", "a2");
-	        pdf.addImage(imgData, "PNG", 0, 0, 420, 594);
+	        const pdf = new jsPdf("p", "mm", "a3");
+	        pdf.addImage(imgData, "PNG", 0, 0, 297, 420);
 	        pdf.save("EC_Rep_organigram.pdf");
 	    })
 	    .then(() => {
