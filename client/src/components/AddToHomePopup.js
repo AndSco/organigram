@@ -4,7 +4,9 @@ import Icon from "../images/addHomeIcon.png";
 const AddToHomePopup = props => {
 	return (
 		<div style={styles.container} className="addHomePopup">
-			<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then "Add to Homescreen".</p>
+			<div style={styles.textContainer}>
+				<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then "Add to Homescreen".</p>
+			</div>	
 		</div>
 	);
 }
@@ -24,9 +26,15 @@ const styles = {
 		bottom: 0, 
 		zIndex: 300, 
 		lineHeight: "20px", 
-		padding: "10px", 
+		// padding: "10px", 
 		alignText: "center"
 	}, 
+	textContainer: {
+		width: "80%", 
+		// padding: "5px",
+		display: "flex", 
+		justifyContent: "center"
+	},
 	image: {
 		width: "18px",
 		height: "18px",
