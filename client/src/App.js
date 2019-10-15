@@ -28,16 +28,16 @@ function App() {
 	}
 
 	// Detects if device is in standalone mode
-	const isInStandaloneMode = () => (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
+	const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
-	// ('standalone' in window.navigator) && (window.navigator.standalone);
+	//(window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
+
+	
 	
 	useEffect(() => {
 		if (isIos && !isInStandaloneMode) {
 			setShowAddToScreenPopup(true);
-		} else {
-			setShowAddToScreenPopup(false);
-		}
+		}	
 	}, []);
 
 
