@@ -42,7 +42,7 @@ function App() {
 		console.log("NAVIGATOR: ", window.navigator);
 		console.log("isIos", isIos());
 		console.log("isInStandaloneMode", isInStandaloneMode())
-		if (isIos && isInStandaloneMode === false) {
+		if (isIos === true && isInStandaloneMode === false) {
 			setShowAddToScreenPopup(true);
 		}	
 	}, []);
