@@ -22,7 +22,7 @@ function App() {
 
 
 	const [showAddToScreenPopup, setShowAddToScreenPopup] = useState(false);
-	
+
 	// Detects if device is on iOS 
 	const isIos = () => {
 	  const userAgent = window.navigator.userAgent.toLowerCase();
@@ -35,7 +35,9 @@ function App() {
 
 	// ('standalone' in window.navigator) && (window.navigator.standalone);
 
-
+	/////
+	const [ios, setIos] = useState(isIos());
+	const [standalone, setStandlone] = useState(isInStandaloneMode());
 	
 	
 	useEffect(() => {
@@ -64,7 +66,7 @@ function App() {
 			    	<AddForm closeForm={closeForm} status={ isAdding ? "form-showing" : "form-hidden" } /> 
 				    <Header addStaffMember={addStaffMember} />
 			      <Grid />
-			      { showAddToScreenPopup && <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />}
+			      { (ios && !standalone) && <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />}
 			    </div>
 			</Context> 
 		)
