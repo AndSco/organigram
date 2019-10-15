@@ -53,7 +53,7 @@ function App() {
 			    	<AddForm closeForm={closeForm} status={ isAdding ? "form-showing" : "form-hidden" } /> 
 				    <Header addStaffMember={addStaffMember} />
 			      <Grid />
-			      <AddToHomePopup /> 
+			      { showAddToScreenPopup && <AddToHomePopup /> }
 			    </div>
 			</Context> 
 		)
@@ -62,7 +62,7 @@ function App() {
     return renderContents();
   }
 
-// { showAddToScreenPopup && <AddToHomePopup /> }
+
 export default App;
 
 
