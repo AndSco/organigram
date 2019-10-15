@@ -33,7 +33,7 @@ function App() {
 	// ('standalone' in window.navigator) && (window.navigator.standalone);
 	
 	useEffect(() => {
-		if (isIos && isInStandaloneMode) {
+		if (isIos && !isInStandaloneMode) {
 			setShowAddToScreenPopup(true);
 		} else {
 			setShowAddToScreenPopup(false);
