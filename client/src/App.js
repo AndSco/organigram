@@ -66,7 +66,7 @@ function App() {
 			    	<AddForm closeForm={closeForm} status={ isAdding ? "form-showing" : "form-hidden" } /> 
 				    <Header addStaffMember={addStaffMember} />
 			      <Grid />
-			      { (ios && !standalone) && <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />}
+			      { (ios === true && standalone === false) && <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />}
 			    </div>
 			</Context> 
 		)
