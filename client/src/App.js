@@ -28,11 +28,15 @@ function App() {
 	}
 
 	// Detects if device is in standalone mode
-	const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+	const isInStandaloneMode = () => (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
 
+	// ('standalone' in window.navigator) && (window.navigator.standalone);
+	
 	useEffect(() => {
 		if (isIos && isInStandaloneMode) {
 			setShowAddToScreenPopup(true);
+		} else {
+			setShowAddToScreenPopup(false);
 		}
 	}, []);
 
