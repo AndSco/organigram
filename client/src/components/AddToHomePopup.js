@@ -1,16 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import Icon from "../images/addHomeIcon.png";
 
 const AddToHomePopup = props => {
+	const [isIos, setIsIos] = useState(props.isIos()); 
+	const [isStand, setIsStand] = useState(props.isStandAlone()); 
+
 	return (
 		<div style={styles.container} className="addHomePopup">
 			<div style={styles.textContainer}>
-				<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then "Add to Homescreen".</p>
+				<p>Ios: {isIos ? "true" : "false"} StandAl: {isStand ? "true" : "false"}</p>
+				
 			</div>	
 		</div>
 	);
 }
 
+// <p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then "Add to Homescreen".</p>
 const styles = {
 	container: {
 		display: "flex", 

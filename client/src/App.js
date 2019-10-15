@@ -19,22 +19,30 @@ function App() {
 	const [isAdding, setIsAdding] = useState(false);
 	
 	// Manage popup to add to screen only on iphone if not installed already
+
+
 	const [showAddToScreenPopup, setShowAddToScreenPopup] = useState(false);
 	
 	// Detects if device is on iOS 
 	const isIos = () => {
 	  const userAgent = window.navigator.userAgent.toLowerCase();
+	  console.log("userAgent", userAgent);
 	  return /iphone|ipad|ipod/.test( userAgent );
 	}
 
 	// Detects if device is in standalone mode
-	const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+	const isInStandaloneMode = () => (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
+
+	// ('standalone' in window.navigator) && (window.navigator.standalone);
 
 	//(window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
 
 	
 	
 	useEffect(() => {
+		console.log("NAVIGATOR: ", window.navigator);
+		console.log("isIos", isIos());
+		console.log("isInStandaloneMode", isInStandaloneMode())
 		if (isIos && !isInStandaloneMode) {
 			setShowAddToScreenPopup(true);
 		}	
@@ -57,7 +65,7 @@ function App() {
 			    	<AddForm closeForm={closeForm} status={ isAdding ? "form-showing" : "form-hidden" } /> 
 				    <Header addStaffMember={addStaffMember} />
 			      <Grid />
-			      { showAddToScreenPopup && <AddToHomePopup /> }
+			      <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />
 			    </div>
 			</Context> 
 		)
@@ -69,4 +77,4 @@ function App() {
 
 export default App;
 
-
+// { showAddToScreenPopup && <AddToHomePopup /> }
