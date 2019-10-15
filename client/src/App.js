@@ -43,7 +43,7 @@ function App() {
 		console.log("NAVIGATOR: ", window.navigator);
 		console.log("isIos", isIos());
 		console.log("isInStandaloneMode", isInStandaloneMode())
-		if (isIos && !isInStandaloneMode) {
+		if (isIos && isInStandaloneMode === false) {
 			setShowAddToScreenPopup(true);
 		}	
 	}, []);
@@ -65,7 +65,7 @@ function App() {
 			    	<AddForm closeForm={closeForm} status={ isAdding ? "form-showing" : "form-hidden" } /> 
 				    <Header addStaffMember={addStaffMember} />
 			      <Grid />
-			      <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />
+			      { showAddToScreenPopup && <AddToHomePopup isIos={isIos} isStandAlone={isInStandaloneMode} />}
 			    </div>
 			</Context> 
 		)
