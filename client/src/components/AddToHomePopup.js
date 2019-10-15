@@ -17,19 +17,19 @@ const styles = {
 		jusdtifyContent: "center", 
 		alignItems: "center",
 		width: "100%",
-		fontSize: "12px", 
+		fontSize: "18px", 
 		backgroundColor: "white", 
 		color: "black", 
 		position: "fixed", 
 		bottom: 0, 
 		zIndex: 300, 
-		lineHeight: "10px", 
+		lineHeight: "20px", 
 		padding: "10px", 
 		alignText: "center"
 	}, 
 	image: {
-		width: "15px",
-		height: "15px",
+		width: "18px",
+		height: "18px",
 	}
 }
 
