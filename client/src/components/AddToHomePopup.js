@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import Icon from "../images/addHomeIcon.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import IconAdd from "../images/icons8-add-new-50.png";
 
 const AddToHomePopup = props => {
 
 	return (
 		<div style={styles.container} className="addHomePopup">
 			<div style={styles.textContainer}>
-				<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then <FontAwesomeIcon icon="plus-square" style={styles.image} /> "Add to Homescreen".</p>
+				<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then "Add to Homescreen" (<img src={IconAdd} alt="add to home button" style={styles.image} />).</p>
 			</div>	
 		</div>
 	);
