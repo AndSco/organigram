@@ -7,7 +7,7 @@ const AddToHomePopup = props => {
 	return (
 		<div style={styles.container} className="addHomePopup">
 			<div style={styles.textContainer}>
-				<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then "Add to Homescreen" (<img src={IconAdd} alt="add to home button" style={styles.image} />).</p>
+				<p>Install this app on your iPhone! Tap <img src={Icon} alt="add to home" style={styles.image} /> below and then <img src={IconAdd} alt="add to home button" style={styles.image} /> "Add to Homescreen".</p>
 			</div>	
 		</div>
 	);
