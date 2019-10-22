@@ -755,7 +755,7 @@ header {
 
 
 /* make employees bigger in bigger screens */
-/*@media all and (min-width: 1500px) {
+@media all and (min-width: 1500px) {
 	.employee {
 		width: 400px;
 	}
@@ -763,9 +763,9 @@ header {
 
 @media all and (min-width: 1640px) {
 	.employee {
-		width: 420px;
+		width: 450px;
 	}
 }
-*/
+
 
 
