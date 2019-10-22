@@ -16,7 +16,10 @@ const Header = props => {
 		toPrint.className += " to-print";
 		// Remove box shadow to all employees!
 		const employees = document.querySelectorAll(".employee");
-		await employees.forEach(div => div.style.boxShadow = "none");
+		await employees.forEach(div => {
+			div.style.boxShadow = "none";
+			div.style.width = "400px";
+		});
 		html2canvas(toPrint, {useCORS: true}) // to allow saving external images!
 	      .then(canvas => {
 	        const imgData = canvas.toDataURL("image/png");
