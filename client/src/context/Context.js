@@ -45,10 +45,11 @@ const Context = props => {
 
 	const removeStaffMember = (employeeId) => {
 		const deleteEndPoint = `/api/employees/${employeeId}`;
-		axios.delete(deleteEndPoint)
-			.then(res => console.log(res))
-			.then(() => setHasDeleted(true))
-			.catch(err => console.log(err));
+		axios
+      .delete(deleteEndPoint)
+      .then(res => console.log(res))
+      .then(() => setHasDeleted(true))
+      .catch(err => addError(err.message));
 	}
 
 
@@ -97,7 +98,9 @@ const Context = props => {
 				setLastUpdate(res.data.lastUpdate);
 			})
 			.then(stopLoading)
-			.catch(err => console.log(err));
+			.catch(err => {
+        addError("Something is wrong with your connection. Try again later");
+      });
 	}, []);
 
 
@@ -109,7 +112,7 @@ const Context = props => {
 				.then(res => setStaffMembers(res.data.employees))
 				.then(stopLoading())
 				.then(setHasEdited(false))
-				.catch(err => console.log(err));
+				.catch(err => addError(err.message));
 		}
 	}, [hasAddedNew, hasEdited]);
 
@@ -117,10 +120,11 @@ const Context = props => {
 	useEffect(() => {
 		if (hasDeleted) {
 			console.log("DELETED!");
-			axios.get("/api/employees")
-				.then(res => setStaffMembers(res.data.employees))
-				.then(setHasDeleted(false))
-				.catch(err => console.log(err));
+			axios
+        .get("/api/employees")
+        .then(res => setStaffMembers(res.data.employees))
+        .then(setHasDeleted(false))
+        .catch(err => addError(err.message));
 		}
 	}, [hasDeleted]);
 

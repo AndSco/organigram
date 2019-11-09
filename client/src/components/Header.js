@@ -15,7 +15,6 @@ const Header = props => {
 		const toPrint = document.querySelector(".App");
 		toPrint.className += " to-print";
 		// Remove box shadow to all employees!
-		const teamContainer = document.querySelector(".team-container");
 		const employees = document.querySelectorAll(".employee");
 		await employees.forEach(div => {
 			div.style.boxShadow = "none";

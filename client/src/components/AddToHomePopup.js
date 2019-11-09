@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Icon from "../images/addHomeIcon.png";
 import IconAdd from "../images/icons8-add-new-50.png";
 

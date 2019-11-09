@@ -22,18 +22,19 @@ const AddForm = props => {
 	const [needNewTeam, setNeedNewTeam] = useState(false);
 
 
-	// FOR EDITING! Set state with params of the current object. these will populate the input as starting values
+  // FOR EDITING! Set state with params of the current object. these will populate the input as starting values
+  const {action, staffMember} = props;
 	useEffect(() => {
-		if (props.action === "edit") {
-			setDesignation(props.staffMember.designation);
-			setName(props.staffMember.name);
-			setOfficePhone(props.staffMember.officePhone);
-			setMobile(props.staffMember.mobile);
-			setTeam(props.staffMember.team);
-			setEmail(props.staffMember.email);
-			setImageFile(props.staffMember.imageFile);
+		if (action === "edit") {
+			setDesignation(staffMember.designation);
+			setName(staffMember.name);
+			setOfficePhone(staffMember.officePhone);
+			setMobile(staffMember.mobile);
+			setTeam(staffMember.team);
+			setEmail(staffMember.email);
+			setImageFile(staffMember.imageFile);
 		}
-	}, [])
+	}, [action, staffMember])
 
 
 	const handleChange = (e, value) => {
