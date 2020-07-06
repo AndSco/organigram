@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 const Employee = require("./models/employee");
 const Image = require("./models/image");
 const path = require("path"); // To serve both frontend and backend
