@@ -15,12 +15,7 @@ library.add(fab, faChevronCircleRight, faSignOutAlt, faDownload, faHome, faDeskt
 
 
 function App() {
-	// const [staffMembers, setStaffMembers] = useState(null); NOW MANAGED BY CONTEXT
 	const [isAdding, setIsAdding] = useState(false);
-	
-	// Manage popup to add to screen only on iphone if not installed already
-
-
 	const [showAddToScreenPopup, setShowAddToScreenPopup] = useState(false);
 
 	// Detects if device is on iOS 
@@ -33,17 +28,11 @@ function App() {
 	// Detects if device is in standalone mode
 	const isInStandaloneMode = () => (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
 
-	// ('standalone' in window.navigator) && (window.navigator.standalone);
-
-	/////
 	const [ios, setIos] = useState(isIos());
 	const [standalone, setStandlone] = useState(isInStandaloneMode());
 	
 	
 	useEffect(() => {
-		console.log("NAVIGATOR: ", window.navigator);
-		console.log("isIos", isIos());
-		console.log("isInStandaloneMode", isInStandaloneMode())
 		if (isIos === true && isInStandaloneMode === false) {
 			setShowAddToScreenPopup(true);
 		}	

@@ -72,7 +72,7 @@ const AddForm = props => {
 		props.closeForm();	
 	}
 
-	// Isoleted picture logic, so it is reusable
+	// Isolated picture logic, so it is reusable
 	const managePicture = () => {
 		const fd = new FormData();
 		console.log(imageFile);

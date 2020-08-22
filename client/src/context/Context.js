@@ -7,8 +7,6 @@ import Login from "../components/Login";
 
 
 const Context = props => {
-	// Context provides the state, hence I have to manage state here. 
-	// Switch triggered by addForm(manageNewInput function) sends context to fetch again from DB!
 	const [staffMembers, setStaffMembers] = useState(null);
 	const [hasAddedNew, setHasAddedNew] = useState(false);
 	const [hasDeleted, setHasDeleted] = useState(false);

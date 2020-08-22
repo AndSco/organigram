@@ -26,32 +26,3 @@ const HeadofRep = props => {
 
 export default HeadofRep;
 
-
-// import React, { useContext } from "react";
-// import Employee from "./Employee";
-// import StaffContext from "../context/StaffContext";
-
-// const HeadofRep = props => {
-// 	const context = useContext(StaffContext);
-
-// 	const headOfRep = context.staffMembers 
-// 		?
-// 		context.staffMembers.filter(member => member.designation === "Head of Representation")[0]
-// 		:
-// 		null;
-
-// 	const secretary = context.staffMembers 
-// 		?
-// 		context.staffMembers.filter(member => member.designation.indexOf("Secretary") > -1)[0]	
-// 		:
-// 		null;
-
-// 	return (
-// 		<div className="head-of-rep">
-// 			<Employee staffMember={headOfRep} />
-// 			<Employee staffMember={secretary} />
-// 		</div>
-// 	)
-// }
-
-// export default HeadofRep;
