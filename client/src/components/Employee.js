@@ -19,7 +19,7 @@ const ContactLine = ({ printMode, printText, icon, linkUrl, linkText }) => {
           color="#7d7d7d"
         />
       )}
-      <a href={linkUrl} style={{ color: "#655f62" }}>
+      <a href={linkUrl} style={{ color: "#1b191a" }}>
         {linkText}
       </a>
     </div>
